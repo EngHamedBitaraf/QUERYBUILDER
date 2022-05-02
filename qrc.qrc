@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>change_item_from_script.lrxml</file>
+    </qresource>
+</RCC>
