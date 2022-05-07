@@ -18,29 +18,38 @@ add jbdc for postgersql
 ## use 
 1. *connect database to config.ini*
 
-`QString  strKey("admin/");
+```c++
+QString  strKey("admin/");
   settings  =  new  QSettings("path",QSettings::IniFormat);
   m_db  =  QSqlDatabase::addDatabase("QPSQL","DBconnection");
   m_db.setHostName(settings->value(strKey  +  "Hostname", "r").toString());
   m_db.setDatabaseName(settings->value(strKey  +  "DataBaseName",  "r").toString());
   m_db.setUserName(settings->value(strKey  +  "UserName",  "r").toString());
-  m_db.setPassword(settings->value(strKey  +  "Password",  "r").toString());`
-
+  m_db.setPassword(settings->value(strKey  +  "Password",  "r").toString());
+  ```
 2. *run SQLeo Query*
 
-`QString  program  =  "java"; 
+```c++
+QString  program  =  "java"; 
   QStringList  argoman;
   argoman<<"-jar";
   argoman<<"path";
   QProcess  *  myprocess  =  new  QProcess(qApp);
   myprocess  ->execute(program,argoman);
-  myprocess->waitForFinished();`
+  myprocess->waitForFinished();
+  ```
 
 
 3.*run ReportGenerator*
-		*set query build*
-`report->dataManager()->addModel("Test",customersModel,true);`			*set form xml*
-`  report->loadFromFile(":/change_item_from_script.lrxml");`
+
+*set query build*
+```c++
+report->dataManager()->addModel("Test",customersModel,true);
+```
+*set form xml*
+```c++
+report->loadFromFile(":/change_item_from_script.lrxml");
+```
 
 	
 
