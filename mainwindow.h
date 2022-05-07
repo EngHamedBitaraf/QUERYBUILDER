@@ -7,6 +7,7 @@
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlQueryModel>
 #include <QSettings>
+#include "dialog_name.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,5 +30,6 @@ private:
     LimeReport::ReportEngine *report;
     QSqlDatabase m_db;
     QSettings *settings;
+    Dialog_name * name_dialogl;
 };
 #endif // MAINWINDOW_H
